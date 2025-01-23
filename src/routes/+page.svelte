@@ -76,7 +76,7 @@
 <div class="page">
 	<Header />
 	<div class="ad-container">
-		<Ad name="page" fill="height" category="Travel" />
+		<Ad name="page" fill="height" category="Travel" region="US" />
 	</div>
 	<section>
 		<h4>For you</h4>

@@ -9,7 +9,7 @@
 </script>
 
 <div class="article">
-	<Ad {name} fill="width" category="Travel" region="US" />
+	<Ad {name} category="Travel" region="US" />
 </div>
 
 <style>
