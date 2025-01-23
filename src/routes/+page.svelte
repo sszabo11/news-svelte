@@ -84,7 +84,7 @@
 {#if mounted}
 	<div class="page">
 		<Header />
-		<div class="ad-container">
+		<div class="ad-meow">
 			<Ad name="page" fill="height" category="Travel" region="US" />
 		</div>
 		<section>
@@ -93,7 +93,7 @@
 				{#each articles.sort(() => Math.random() - 0.5) as article, i}
 					{#if i % 5 === 0}
 						<div class="feed-ad">
-							<ArticleAd name={`feed-${i / 5}`} />
+							<ArticleAd name={`feed-${i / 5 + 1}`} />
 						</div>
 					{/if}
 					<Article {...article} />
@@ -122,6 +122,7 @@
 <style>
 	.page {
 		width: 100%;
+		height: 100%;
 	}
 
 	.articles {
@@ -129,7 +130,7 @@
 		gap: 30px;
 	}
 
-	.ad-container {
+	.ad-meow {
 		width: 100%;
 		height: 200px;
 	}
