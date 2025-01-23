@@ -3,6 +3,8 @@
 	import Article from '$lib/Article.svelte';
 	import Header from '$lib/Header.svelte';
 	import ArticleAd from '$lib/ArticleAd.svelte';
+	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
 
 	let articles: {
 		src: string;
@@ -71,43 +73,51 @@
 			author: 'Oliver Smith'
 		}
 	];
+
+	let mounted = $state(false);
+	onMount(() => {
+		mounted = true;
+		console.log('mounted');
+	});
 </script>
 
-<div class="page">
-	<Header />
-	<div class="ad-container">
-		<Ad name="page" fill="height" category="Travel" region="US" />
+{#if mounted}
+	<div class="page">
+		<Header />
+		<div class="ad-container">
+			<Ad name="page" fill="height" category="Travel" region="US" />
+		</div>
+		<section>
+			<h4>For you</h4>
+			<div class="articles">
+				{#each articles.sort(() => Math.random() - 0.5) as article, i}
+					{#if i % 5 === 0}
+						<div class="feed-ad">
+							<ArticleAd name={`feed-${i / 5}`} />
+						</div>
+					{/if}
+					<Article {...article} />
+				{/each}
+			</div>
+		</section>
+		<section>
+			<h4>Trending</h4>
+			<div class="articles">
+				{#each articles.sort(() => Math.random() - 0.8) as article}
+					<Article {...article} />
+				{/each}
+			</div>
+		</section>
+		<section>
+			<h4>Breaking</h4>
+			<div class="articles">
+				{#each articles.sort(() => Math.random() - 0.2) as article}
+					<Article {...article} />
+				{/each}
+			</div>
+		</section>
 	</div>
-	<section>
-		<h4>For you</h4>
-		<div class="articles">
-			{#each articles.sort(() => Math.random() - 0.5) as article, i}
-				{#if i % 5 === 0}
-					<div class="feed-ad">
-						<ArticleAd name={`feed-${i / 5}`} />
-					</div>
-				{/if}
-				<Article {...article} />
-			{/each}
-		</div>
-	</section>
-	<section>
-		<h4>Trending</h4>
-		<div class="articles">
-			{#each articles.sort(() => Math.random() - 0.8) as article}
-				<Article {...article} />
-			{/each}
-		</div>
-	</section>
-	<section>
-		<h4>Breaking</h4>
-		<div class="articles">
-			{#each articles.sort(() => Math.random() - 0.2) as article}
-				<Article {...article} />
-			{/each}
-		</div>
-	</section>
-</div>
+{/if}
 
 <style>
 	.page {
