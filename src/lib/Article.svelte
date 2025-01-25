@@ -23,7 +23,6 @@
 <style>
 	.article {
 		padding: 18px;
-		width: 300px;
 		height: 230px;
 		background-color: #111111;
 		display: flex;
