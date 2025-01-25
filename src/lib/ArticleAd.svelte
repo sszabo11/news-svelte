@@ -4,9 +4,10 @@
 
 	type Props = {
 		name: string;
+		key: string;
 	};
 
-	let { name }: Props = $props();
+	let { name, key }: Props = $props();
 
 	onMount(() => {
 		console.log('article mount');
@@ -15,7 +16,7 @@
 
 <div class="article">
 	<div class="ad">
-		<Ad {name} category="Travel" region="US" borderRadius={0} />
+		<Ad name="fgrew" {key} category="Travel" region="US" borderRadius={0} />
 	</div>
 	<span>Promoted content</span>
 </div>

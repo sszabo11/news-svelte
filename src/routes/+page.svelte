@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Ad } from 'svelte-adjust';
+	import { Ad, Dynamic } from 'svelte-adjust';
 	import Article from '$lib/Article.svelte';
 	import Header from '$lib/Header.svelte';
 	import ArticleAd from '$lib/ArticleAd.svelte';
@@ -90,14 +90,16 @@
 		<section>
 			<h4>For you</h4>
 			<div class="articles">
-				{#each articles.sort(() => Math.random() - 0.5) as article, i}
-					{#if i % 5 === 0}
-						<div class="feed-ad">
-							<ArticleAd name={`feed-${i / 5 + 1}`} />
-						</div>
-					{/if}
-					<Article {...article} />
-				{/each}
+				<Dynamic group="trending">
+					{#each articles.sort(() => Math.random() - 0.5) as article, i}
+						{#if i % 5 === 0}
+							<div class="feed-ad">
+								<ArticleAd key={i.toString()} name="" />
+							</div>
+						{/if}
+						<Article {...article} />
+					{/each}
+				</Dynamic>
 			</div>
 		</section>
 		<section>
