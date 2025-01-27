@@ -26,7 +26,7 @@
 				<Group name="for-you">
 					{#each articles.sort(() => Math.random() - 0.5) as article, i}
 						{#if i % 5 === 0}
-							<ArticleAd group="for-you" key={(i / 5 + 1).toString()} name="" />
+							<ArticleAd priority={5} group="for-you" key={(i / 5 + 1).toString()} name="" />
 						{/if}
 						<Article {...article} />
 					{/each}
