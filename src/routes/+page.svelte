@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Ad, Dynamic } from 'svelte-adjust';
+	import { Ad, Dynamic, Group } from 'svelte-adjust';
 	import Article from '$lib/Article.svelte';
 	import Header from '$lib/Header.svelte';
 	import ArticleAd from '$lib/ArticleAd.svelte';
@@ -23,46 +23,40 @@
 		<section>
 			<h4>For you</h4>
 			<div class="articles">
-				<Dynamic group="for-you">
+				<Group name="for-you">
 					{#each articles.sort(() => Math.random() - 0.5) as article, i}
 						{#if i % 5 === 0}
-							<div class="feed-ad">
-								<ArticleAd key={(i / 5 + 1).toString()} name="" />
-							</div>
+							<ArticleAd group="for-you" key={(i / 5 + 1).toString()} name="" />
 						{/if}
 						<Article {...article} />
 					{/each}
-				</Dynamic>
+				</Group>
 			</div>
 		</section>
 		<section>
 			<h4>Trending</h4>
 			<div class="articles">
-				<Dynamic group="trending">
+				<Group name="trending">
 					{#each articles.sort(() => Math.random() - 0.8) as article, i}
 						{#if i > 3 && i % 3 === 0}
-							<div class="feed-ad">
-								<ArticleAd key={(i / 3 + 1).toString()} name="" />
-							</div>
+							<ArticleAd group="trending" key={(i / 3 + 1).toString()} name="" />
 						{/if}
 						<Article {...article} />
 					{/each}
-				</Dynamic>
+				</Group>
 			</div>
 		</section>
 		<section>
 			<h4>Breaking</h4>
 			<div class="articles">
-				<Dynamic group="breaking">
+				<Group name="breaking">
 					{#each articles.sort(() => Math.random() - 0.2) as article, i}
 						{#if i > 2 && i % 4 === 0}
-							<div class="feed-ad">
-								<ArticleAd key={(i / 4 + 1).toString()} name="" />
-							</div>
+							<ArticleAd group="breaking" key={(i / 4 + 1).toString()} name="" />
 						{/if}
 						<Article {...article} />
 					{/each}
-				</Dynamic>
+				</Group>
 			</div>
 		</section>
 	</div>
