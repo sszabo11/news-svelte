@@ -29,6 +29,6 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
-    "svelte-adjust": "^0.0.30"
+    "svelte-adjust": "^0.0.31"
   }
 }

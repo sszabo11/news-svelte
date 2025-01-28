@@ -17,8 +17,13 @@
 {#if mounted}
 	<div class="page">
 		<Header />
-		<div class="ad-meow">
-			<Ad name="page" fill="height" category="Travel" region="US" />
+		<div class="header-ads">
+			<div class="ad-meow">
+				<Ad name="head-1" fill="height" category="Travel" region="US" />
+			</div>
+			<div class="ad-meow">
+				<Ad name="meow" fill="height" category="Travel" region="US" />
+			</div>
 		</div>
 		<section>
 			<h4>For you</h4>
@@ -75,8 +80,13 @@
 		overflow-x: auto;
 	}
 
+	.header-ads {
+		display: flex;
+		align-items: center;
+	}
+
 	.ad-meow {
-		width: 100%;
+		width: 300px;
 		height: 200px;
 	}
 
