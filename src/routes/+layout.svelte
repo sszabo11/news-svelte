@@ -1,10 +1,7 @@
 <script lang="ts">
 	import Sidebar from '$lib/Sidebar.svelte';
-	import { initializeAds } from 'svelte-adjust';
 
 	let { children } = $props();
-
-	initializeAds(8);
 </script>
 
 <div class="app">

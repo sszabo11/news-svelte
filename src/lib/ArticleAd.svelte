@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { Ad } from 'svelte-adjust';
+	import { Ad } from 'adjust-svelte-test';
 
 	type Props = {
 		name: string;
