@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Ad } from 'adjust-svelte-test';
+	import { Ad, Group } from 'adjust-svelte-test';
 	import Article from '$lib/Article.svelte';
 	import Header from '$lib/Header.svelte';
 	import ArticleAd from '$lib/ArticleAd.svelte';
@@ -28,7 +28,6 @@
 		<section>
 			<h4>For you</h4>
 			<div class="articles">
-				<!--
 				<Group name="for-you">
 					{#each articles.sort(() => Math.random() - 0.5) as article, i}
 						{#if i % 5 === 0}
@@ -36,14 +35,12 @@
 						{/if}
 						<Article {...article} />
 					{/each}
-</Group>
--->
+				</Group>
 			</div>
 		</section>
 		<section>
 			<h4>Trending</h4>
 			<div class="articles">
-				<!--
 				<Group name="trending">
 					{#each articles.sort(() => Math.random() - 0.8) as article, i}
 						{#if i > 3 && i % 3 === 0}
@@ -51,14 +48,12 @@
 						{/if}
 						<Article {...article} />
 					{/each}
-</Group>
--->
+				</Group>
 			</div>
 		</section>
 		<section>
 			<h4>Breaking</h4>
 			<div class="articles">
-				<!--
 				<Group name="breaking">
 					{#each articles.sort(() => Math.random() - 0.2) as article, i}
 						{#if i > 2 && i % 4 === 0}
@@ -66,8 +61,7 @@
 						{/if}
 						<Article {...article} />
 					{/each}
-        </Group>
-        -->
+				</Group>
 			</div>
 		</section>
 	</div>
