@@ -1,5 +1,6 @@
 <header>
 	<h1>The Rabbit Times</h1>
+	<p>Your latest news</p>
 </header>
 
 <style>

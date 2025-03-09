@@ -19,10 +19,16 @@
 		<Header />
 		<div class="header-ads">
 			<div class="ad-meow">
-				<Ad name="head-1" fill="height" category="Travel" region="US" />
+				<Ad name="head-1" fill="height" category="Travel" region="US" context="Starlink" />
 			</div>
 			<div class="ad-meow">
-				<Ad name="meow" fill="height" category="Travel" region="US" />
+				<Ad
+					name="meow"
+					fill="height"
+					category="Travel"
+					region="US"
+					context="The truth about coffee"
+				/>
 			</div>
 		</div>
 		<section>
@@ -31,7 +37,7 @@
 				<Group name="for-you">
 					{#each articles.sort(() => Math.random() - 0.5) as article, i}
 						{#if i % 5 === 0}
-							<ArticleAd priority={5} group="for-you" key={(i / 5 + 1).toString()} name="" />
+							<ArticleAd priority={5} key={(i / 5 + 1).toString()} />
 						{/if}
 						<Article {...article} />
 					{/each}
@@ -44,7 +50,7 @@
 				<Group name="trending">
 					{#each articles.sort(() => Math.random() - 0.8) as article, i}
 						{#if i > 3 && i % 3 === 0}
-							<ArticleAd group="trending" key={(i / 3 + 1).toString()} name="" />
+							<ArticleAd key={(i / 3 + 1).toString()} />
 						{/if}
 						<Article {...article} />
 					{/each}
@@ -57,7 +63,7 @@
 				<Group name="breaking">
 					{#each articles.sort(() => Math.random() - 0.2) as article, i}
 						{#if i > 2 && i % 4 === 0}
-							<ArticleAd group="breaking" key={(i / 4 + 1).toString()} name="" />
+							<ArticleAd key={(i / 4 + 1).toString()} />
 						{/if}
 						<Article {...article} />
 					{/each}
