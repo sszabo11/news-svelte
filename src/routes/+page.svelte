@@ -14,6 +14,10 @@
 	});
 </script>
 
+<svelte:head>
+	<script id="ads-cdn" src="http://127.0.0.1:52328/dist/index.min.js?site_id=8"></script>
+</svelte:head>
+
 {#if mounted}
 	<div class="page">
 		<Header />
