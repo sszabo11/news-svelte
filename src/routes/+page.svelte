@@ -6,6 +6,7 @@
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 	import { articles } from '$lib/articles';
+	import { PUBLIC_ADJUST_KEY } from '$env/static/public';
 
 	let mounted = $state(false);
 	onMount(() => {
@@ -15,7 +16,11 @@
 </script>
 
 <svelte:head>
-	<script id="ads-cdn" src="http://127.0.0.1:52328/dist/index.min.js?site_id=8"></script>
+	<script
+		data-api-key={PUBLIC_ADJUST_KEY}
+		id="ads-cdn"
+		src="http://127.0.0.1:53102/dist/index.min.js?site_id=8"
+	></script>
 </svelte:head>
 
 {#if mounted}
