@@ -28,7 +28,7 @@
     "vitest": "^3.0.0"
   },
   "dependencies": {
-    "adjust-svelte-test": "^1.2.13",
+    "adjust-svelte-test": "^1.2.14",
     "animate.css": "^4.1.1"
   }
 }
