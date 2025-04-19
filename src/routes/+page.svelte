@@ -11,7 +11,6 @@
 	let mounted = $state(false);
 	onMount(() => {
 		mounted = true;
-		console.log('mounted');
 	});
 </script>
 
