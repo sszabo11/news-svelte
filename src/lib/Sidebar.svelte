@@ -24,7 +24,7 @@
 			<span class="tooltiptext">Analytics</span><a href="/site/dashboard/analytics"><Post /></a>
 		</li>
 		<li class="item">
-			<span class="tooltiptext">Spending</span><a href="/site/dashboard/spending"><Account /></a>
+			<span class="tooltiptext">Pro</span><a href="/purchase/banana/"><Account /></a>
 		</li>
 	</ul>
 </div>
@@ -82,8 +82,8 @@
 	.item .tooltiptext {
 		visibility: hidden;
 		width: 100px;
-		background-color: var(--dark-grey);
-		color: var(--color);
+		background-color: #111111;
+		color: white;
 		text-align: center;
 		padding: 6px 12px;
 		border-radius: 6px;

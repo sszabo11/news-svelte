@@ -1,7 +1,13 @@
 <script lang="ts">
 	import Sidebar from '$lib/Sidebar.svelte';
+	import { onMount } from 'svelte';
+	import { AirNotice } from 'airnotice-events';
 
 	let { children } = $props();
+
+	onMount(() => {
+		AirNotice.init('brand_grnojegojre', true);
+	});
 </script>
 
 <div class="app">
