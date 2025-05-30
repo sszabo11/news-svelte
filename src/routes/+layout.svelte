@@ -2,14 +2,22 @@
 	import Sidebar from '$lib/Sidebar.svelte';
 	import { onMount } from 'svelte';
 	import { AirNotice } from 'airnotice-events';
+	import { dev } from '$app/environment';
 
 	let { children } = $props();
 
 	onMount(() => {
 		AirNotice.init('brand_grnojegojre', true);
 	});
+
+	let events = dev
+		? 'http://127.0.0.1:8080/dist/index.min.js'
+		: 'https://airnotice-events.s3.us-east-1.amazonaws.com/index.js';
 </script>
 
+<svelte:head>
+	<script id="airnotice-events" data-api-key="meow" data-is-dev="true" src={events}></script>
+</svelte:head>
 <div class="app">
 	<Sidebar />
 	<div class="page">
