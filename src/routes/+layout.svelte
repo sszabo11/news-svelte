@@ -11,7 +11,7 @@
 	});
 
 	let events = dev
-		? 'http://127.0.0.1:8080/dist/index.min.js'
+		? 'http://127.0.0.1:8080/packages/cdn/dist/index.min.js'
 		: 'https://airnotice-events.s3.us-east-1.amazonaws.com/index.js';
 </script>
 
