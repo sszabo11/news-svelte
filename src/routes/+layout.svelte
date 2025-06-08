@@ -16,7 +16,12 @@
 </script>
 
 <svelte:head>
-	<script id="airnotice-events" data-api-key="meow" data-is-dev={dev} src={events}></script>
+	<script
+		id="airnotice-events"
+		data-api-key="meow"
+		data-is-dev={dev ? 'true' : 'false'}
+		src={events}
+	></script>
 </svelte:head>
 <div class="app">
 	<Sidebar />
