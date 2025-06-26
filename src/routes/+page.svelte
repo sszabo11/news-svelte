@@ -14,6 +14,7 @@
 	});
 </script>
 
+<!--
 <svelte:head>
 	<script
 		data-api-key={PUBLIC_ADJUST_KEY}
@@ -21,6 +22,7 @@
 		src="http://127.0.0.1:53102/dist/index.min.js?site_id=8"
 	></script>
 </svelte:head>
+-->
 
 {#if mounted}
 	<div class="page">
