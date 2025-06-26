@@ -10,12 +10,12 @@
 		AirNotice.init('brand_grnojegojre', true);
 	});
 
-	//let events = dev
-	//		? 'http://127.0.0.1:8080/packages/cdn/dist/index.min.js'
-	//		: 'https://airnotice-events.s3.us-east-1.amazonaws.com/index.js';
+	let events = dev
+			? 'http://127.0.0.1:8080/packages/cdn/dist/index.min.js'
+			: 'https://airnotice-events.s3.us-east-1.amazonaws.com/index.js';
 </script>
 
-<!--
+{#if !dev}
 <svelte:head>
 	<script
 		id="airnotice-events"
@@ -24,7 +24,7 @@
 		src={events}
 ></script>
 </svelte:head>
-  -->
+{/if}
 <div class="app">
 	<Sidebar />
 	<div class="page">
