@@ -28,7 +28,7 @@
     "vitest": "^3.0.0"
   },
   "dependencies": {
-    "adjust-svelte-test": "^1.2.22",
+    "adjust-svelte-test": "^1.2.23",
     "airnotice-events": "^0.0.4",
     "animate.css": "^4.1.1"
   }
