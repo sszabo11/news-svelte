@@ -1,13 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { Ad } from 'adjust-svelte-test';
+	import { Ad } from 'airnotice';
 
-	type Props = {
-		key: string;
-		priority?: number;
-	};
+	type Props = {};
 
-	let { key, priority }: Props = $props();
+	let {}: Props = $props();
 
 	onMount(() => {
 		console.log('article mount');
@@ -16,7 +13,7 @@
 
 <div class="article">
 	<div class="ad">
-		<Ad {priority} {key} category="Travel" region="US" borderRadius={0} />
+		<Ad name="" />
 	</div>
 	<span>Promoted content</span>
 </div>

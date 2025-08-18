@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { Ad, Group } from 'adjust-svelte-test';
 	import Article from '$lib/Article.svelte';
 	import Header from '$lib/Header.svelte';
 	import ArticleAd from '$lib/ArticleAd.svelte';
@@ -7,6 +6,7 @@
 	import { browser } from '$app/environment';
 	import { articles } from '$lib/articles';
 	import { PUBLIC_ADJUST_KEY } from '$env/static/public';
+	import { Ad, Group } from 'airnotice';
 
 	let mounted = $state(false);
 	onMount(() => {
@@ -28,16 +28,10 @@
 	<Header />
 	<div class="header-ads">
 		<div class="ad-meow">
-			<Ad name="head-1" fill="height" category="Travel" region="US" context="Starlink" />
+			<Ad name="head-1" />
 		</div>
 		<div class="ad-meow">
-			<Ad
-				name="meow"
-				fill="height"
-				category="Travel"
-				region="US"
-				context="The truth about coffee"
-			/>
+			<Ad name="cat" />
 		</div>
 	</div>
 	<section>
@@ -46,7 +40,7 @@
 			<Group name="for-you">
 				{#each articles.sort(() => Math.random() - 0.5) as article, i}
 					{#if i % 5 === 0}
-						<ArticleAd priority={5} key={(i / 5 + 1).toString()} />
+						<ArticleAd />
 					{/if}
 					<Article {...article} />
 				{/each}

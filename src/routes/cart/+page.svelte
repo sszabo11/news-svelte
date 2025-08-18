@@ -1,3 +1,6 @@
+<script>
+</script>
+
 <div class="cart">
 	<h2>Your cart</h2>
 	<div class="item">
@@ -9,6 +12,7 @@
 		/>
 		<h2>$59.99</h2>
 	</div>
+	<div class="item ad"></div>
 </div>
 
 <style>
