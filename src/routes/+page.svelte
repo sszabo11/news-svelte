@@ -5,8 +5,7 @@
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 	import { articles } from '$lib/articles';
-	import { PUBLIC_ADJUST_KEY } from '$env/static/public';
-	import { Ad, Group } from 'airnotice';
+	import { Ad, Group, initAirNotice } from 'airnotice-svelte';
 
 	let mounted = $state(false);
 	onMount(() => {
@@ -31,7 +30,10 @@
 			<Ad name="head-1" />
 		</div>
 		<div class="ad-meow">
-			<Ad name="cat" />
+			<Ad name="bok" />
+		</div>
+		<div class="ad-meow">
+			<Ad name="dog" />
 		</div>
 	</div>
 	<section>

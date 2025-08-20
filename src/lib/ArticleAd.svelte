@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { Ad } from 'airnotice';
+	import { Ad } from 'airnotice-svelte';
 
 	type Props = {};
 

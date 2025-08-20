@@ -28,8 +28,8 @@
     "vitest": "^3.0.0"
   },
   "dependencies": {
-    "airnotice": "^1.2.25",
     "airnotice-events": "^0.0.4",
+    "airnotice-svelte": "^1.2.27",
     "animate.css": "^4.1.1"
   }
 }

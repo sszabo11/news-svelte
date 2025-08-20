@@ -3,11 +3,18 @@
 	import { onMount } from 'svelte';
 	import { AirNotice } from 'airnotice-events';
 	import { dev } from '$app/environment';
+	import { initAirNotice } from 'airnotice-svelte';
+	import { env } from '$env/dynamic/public';
 
 	let { children } = $props();
 
 	onMount(() => {
 		AirNotice.init('brand_grnojegojre', true);
+	});
+	initAirNotice({
+		apiKey: env?.PUBLIC_AIRNOTICE_DEV_KEY,
+		showUnitStatus: true,
+		autoSave: true
 	});
 
 	let events = dev
