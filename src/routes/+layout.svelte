@@ -22,7 +22,7 @@
 	<script
 		data-api-key="2cd3fcd2-8f59-46f9-baf4-3259272ea764"
 		src="https://media.airnotice.co/place/index.js"
-		id="ads-cdn"
+		id="airnotice-place"
 	></script>
 
 	{#if !dev}
