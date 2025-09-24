@@ -16,16 +16,12 @@
 		showUnitStatus: true,
 		autoSave: true
 	});
-
-	let events = dev
-		? 'http://127.0.0.1:8080/packages/cdn/dist/index.min.js'
-		: 'https://airnotice-events.s3.us-east-1.amazonaws.com/index.js';
 </script>
 
 <svelte:head>
 	<script
-		data-api-key="site_prod_694d04afa9ed4f6eb428508e18f8c81a"
-		src={'https://ad-unit-cdn.s3.us-east-1.amazonaws.com/place.js'}
+		data-api-key="2cd3fcd2-8f59-46f9-baf4-3259272ea764"
+		src="https://media.airnotice.co/place/index.js"
 		id="ads-cdn"
 	></script>
 
