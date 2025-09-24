@@ -23,12 +23,17 @@
 </script>
 
 <svelte:head>
+	<script
+		data-api-key="site_prod_694d04afa9ed4f6eb428508e18f8c81a"
+		src={'https://ad-unit-cdn.s3.us-east-1.amazonaws.com/place.js'}
+		id="ads-cdn"
+	></script>
+
 	{#if !dev}
 		<script
 			id="airnotice-events"
-			data-api-key="meow"
-			data-is-dev={dev ? 'true' : 'false'}
-			src={events}
+			data-key="13965b5a-38e8-4dd6-b349-0cf88ea4e693"
+			src={`https://media.airnotice.co/events/index.js?meow=${performance.now()}`}
 		></script>
 	{/if}
 </svelte:head>
